@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORTEIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div id="menu">
+            <h2>Escolha o modo do Sorteio</h2>
+            <button onclick="irParaRifa()">Modo Rifa</button>
+            <button onclick="irParaNumero()">Modo Numero</button>
+        </div>
+        <div id="rifa" style="display: none;">
+            <h2>Cadastro Sorteio</h2>
+            <input id="nome" type="text" placeholder="Digite o nome">
+            <button onclick="cadastrar()">Cadastrar</button>
+            <p id="contadorParticipantes">Participantes (0)</p>
+            <button onclick="sortear()">Sortear</button>
+            <p id="vencedor"></p>
+
+            <button onclick="voltarMenu()">Voltar</button>
+            <button onclick="verParticipantes()">Ver Participantes</button>
+        </div>  
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                    <h3>Participantes</h3>
+                    <div id="listaParticipantes"></div>
+                    <button onclick="fecharModal()">Fechar</button>
+                    </div>
+        </div>
+    
+        <div id="numero" style="display: none;">
+            <h2>Selecione a quantidade do sorteio</h2>
+                <div id="grupoDez">
+                    <h3>Sorteie um Numero de 1 > 10</h3>
+                    <button onclick="modoZeroDez()">1 a 10</button>
+                    
+                </div>
+                <div id="grupoCem">
+                    <h3>Sorteie um Numero de 1 > 100</h3>
+                    <button onclick="modoZeroCem()">1 a 100</button>
+                    
+                </div>
+                <div id="grupoMil">
+                    <h3>Sorteie um Numero de 0 > 1000</h3>
+                    <button onclick="modoZeroMil()">1 a 1000</button>
+                    
+                </div>
+            <p id="numeroSorteado"></p>
+            <button onclick="voltarModoNumero()">Reset</button>
+            <button onclick="voltarMenu()">Voltar</button>
+
+        </div>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
